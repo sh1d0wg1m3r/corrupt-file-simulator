@@ -30,11 +30,11 @@ def generate_file(_):
     random_text = ''.join(np.random.choice(list(charset), size=text_length))
     with open(file_path, 'w') as f:
         f.write(random_text)
-    time.sleep(0.002)  # introduce a 10-millisecond delay between writes
+    time.sleep(0.005)  # introduce a 10-millisecond delay between writes can remove if not hard drive(it can skip files)
 
 # define a function to generate multiple random files with random extensions in parallel
 def generate_files(num_files):
-    bytes_per_second = 50 * 1024 * 1024  # 50 MB/s
+    bytes_per_second = 50 * 1024 * 1024  # 50 MB/s do not remove, but you can change 50 to the number you desire
     bytes_per_thread = bytes_per_second // text_length
     max_workers = max(1, int(bytes_per_thread))
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
