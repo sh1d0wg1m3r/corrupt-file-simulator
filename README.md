@@ -1,4 +1,4 @@
-# Random File Generator Script
+# Random File Generator Script ( my first script :) )
 
 ## Description
 This script is designed to create a specified number of random text files in batches. Each file has a unique name and contains random alphanumeric characters. It's useful for testing and benchmarking file system performance, data processing applications, and more.
